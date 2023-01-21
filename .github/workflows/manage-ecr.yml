@@ -31,5 +31,6 @@ jobs:
             docker push $REGISTRY/$REPOSITORY:$IMAGE_TAG
         - name: Run unit tests in container
           run: |
-            docker run --help
+            echo $REGISTRY $REPOSITORY
+            echo ${{ steps.login-ecr.outputs.registry }}
             docker run "$REGISTRY/$REPOSITORY:$IMAGE_TAG" -m unittest --verbose --failfast
