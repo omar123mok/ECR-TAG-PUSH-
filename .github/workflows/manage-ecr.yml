@@ -31,4 +31,5 @@ jobs:
             docker push $REGISTRY/$REPOSITORY:$IMAGE_TAG
         - name: Run unit tests in container
           run: |
-            docker run "$REGISTRY/$REPOSITORY:$IMAGE_TAG" -m unittest --verbose --failfast   
+            docker run --help
+            docker run "$REGISTRY/$REPOSITORY:$IMAGE_TAG" -m unittest --verbose --failfast
