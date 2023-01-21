@@ -8,14 +8,14 @@ WORKDIR /app
 COPY . /app
 
 # pip install flask
-RUN pip install --upgrade pip && \
-    pip install \
-        Flask \
-        awscli \
-        flake8 \
-        pylint \
-        pytest \
-        pytest-flask
+# RUN pip install --upgrade pip && \
+#     pip install \
+#         Flask \
+#         awscli \
+#         flake8 \
+#         pylint \
+#         pytest \
+#         pytest-flask
 
 # expose the default flask port
 EXPOSE 8080
