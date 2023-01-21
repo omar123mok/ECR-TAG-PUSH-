@@ -29,10 +29,3 @@ jobs:
           run: |
             docker build -t $REGISTRY/$REPOSITORY:$IMAGE_TAG .
             docker push $REGISTRY/$REPOSITORY:$IMAGE_TAG
-        - name: Echo
-          run: |
-            echo $REGISTRY $REPOSITORY
-            echo ${{ steps.login-ecr.outputs.registry }}
-            
-        - name: Run unit tests in container
-          run: docker pull 032507864348.dkr.ecr.us-east-1.amazonaws.com/repo:$IMAGE_TAG
